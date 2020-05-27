@@ -27,6 +27,16 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: "gatsby-source-sanity",
+      options: {
+        projectId: "eexef1pc",
+        dataset: "production",
+        // watchMode: true,
+        // overlayDrafts: true,
+        // token: process.env.SANITY_READ_TOKEN,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
