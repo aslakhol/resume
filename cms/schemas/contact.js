@@ -1,5 +1,5 @@
 export default {
-  name: "reference",
+  name: "contact",
   title: "Reference",
   type: "document",
   fields: [
@@ -36,7 +36,7 @@ export default {
     {
       name: "linkedin",
       title: "LinkedIn profile",
-      type: "URL",
+      type: "url",
       description: "LinkedIn profile URL of the reference.",
     },
   ],
