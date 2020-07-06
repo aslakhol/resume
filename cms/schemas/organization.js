@@ -10,17 +10,39 @@ export default {
       description: "Name of organization.",
     },
     {
-      name: "description",
-      title: "Description",
+      name: "website",
+      title: "Website",
+      type: "url",
+      description:
+        "Url of the website of the organization or other relevant link.",
+    },
+    {
+      name: "short_description",
+      title: "Short description",
       type: "string",
-      description: "Short description of the organization.",
+      description:
+        "Short description of the organization, one or two sentences max.",
+    },
+    {
+      name: "parent_organization",
+      title: "Parent organization",
+      type: "reference",
+      to: [{ type: "organization" }],
+      description: "",
+    },
+    {
+      name: "long_description",
+      title: "Long description",
+      type: "text",
+      description: "Longer description of the organization.",
     },
     {
       name: "city",
       title: "City",
       type: "array",
       of: [{ type: "string" }],
-      description: "The city or cities that the organization is located in.",
+      description:
+        "The city or cities that the organization is located in and that I worked in.",
     },
     {
       name: "country",

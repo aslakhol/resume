@@ -10,6 +10,13 @@ export default {
       description: "Name of responsibility.",
     },
     {
+      name: "organization",
+      title: "Organization",
+      type: "reference",
+      to: { type: "organization" },
+      description: "The organization that this responsebility was attached to.",
+    },
+    {
       name: "type",
       title: "Type",
       type: "string",
@@ -25,7 +32,7 @@ export default {
     {
       name: "long_description",
       title: "Long description",
-      type: "string",
+      type: "text",
       description: "Longer description of the responsibility.",
     },
     {
