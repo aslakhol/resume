@@ -45,7 +45,7 @@ export default {
       name: "paid",
       title: "Paid",
       type: "boolean",
-      description: "Was this a paid role?",
+      description: "Was this a paid project?",
     },
     {
       name: "learned_technologies",

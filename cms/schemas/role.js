@@ -38,7 +38,7 @@ export default {
       name: "paid",
       title: "Paid",
       type: "boolean",
-      description: "Was this a paid project?",
+      description: "Was this a paid role?",
     },
     {
       name: "start_date",
