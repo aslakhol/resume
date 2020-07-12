@@ -50,7 +50,7 @@ export default {
       type: "array",
       of: [{ type: "string" }],
       description:
-        "The country or countries that the organization is located in.",
+        "The country or countries that the organization is located in and that I worked in.",
     },
   ],
   preview: {

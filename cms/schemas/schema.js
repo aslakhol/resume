@@ -7,8 +7,10 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 import animal from "./animal";
 import organization from "./organization";
 import project from "./project";
-import responsibility from "./responsibility";
+import role from "./role";
 import contact from "./contact";
+import program from "./program";
+import meta from "./meta";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -20,8 +22,10 @@ export default createSchema({
     /* Your types here! */
     animal,
     contact,
+    meta,
     organization,
+    program,
     project,
-    responsibility,
+    role,
   ]),
 });

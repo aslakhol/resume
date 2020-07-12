@@ -13,7 +13,7 @@ export default {
       name: "institution",
       title: "Institution",
       type: "reference",
-      of: [{ type: "organization" }],
+      to: [{ type: "organization" }],
       description: "The institution the program belongs to.",
     },
     {

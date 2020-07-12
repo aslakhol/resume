@@ -42,6 +42,12 @@ export default {
       description: "Long description of the project.",
     },
     {
+      name: "paid",
+      title: "Paid",
+      type: "boolean",
+      description: "",
+    },
+    {
       name: "learned_technologies",
       title: "Learned techonologies",
       type: "array",
