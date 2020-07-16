@@ -15,12 +15,14 @@ export default {
       type: "reference",
       to: [{ type: "organization" }],
       description: "The institution the program belongs to.",
+      validation: (Rule) => Rule.required(),
     },
     {
       name: "start_date",
       title: "Start date",
       type: "date",
       description: "The date I started on the program.",
+      validation: (Rule) => Rule.required(),
     },
     {
       name: "end_date",
