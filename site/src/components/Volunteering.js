@@ -40,8 +40,8 @@ const Organization = props => {
           {roles.map((role, index) => (
             <li key={index + role.long_name}>
               <span>{role.long_name} </span>
-              <span>{role.start_date}</span>
-              {role.end_date ? " - " + role.end_date : ""}
+              <span>{role.start_date} - </span>
+              {role.end_date ? role.end_date : "Nå"}
             </li>
           ))}
         </ul>
