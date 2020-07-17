@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Meta from "../components/meta"
 import Program from "../components/Program"
-import Volunteering from "../components/Volunteering"
+import Organizations from "../components/Organizations"
 
 const Resume = ({ data }) => {
   const me = data.allSanityMeta.nodes[0]
@@ -20,9 +20,9 @@ const Resume = ({ data }) => {
       ))}
 
       <h2>Verv</h2>
-      <Volunteering organizations={organizations} roles={vervRoles} />
+      <Organizations organizations={organizations} roles={vervRoles} />
       <h2>Arbeidserfaring</h2>
-      <Volunteering organizations={organizations} roles={paidRoles} />
+      <Organizations organizations={organizations} roles={paidRoles} />
       <h2>Tekniske ferdigheter</h2>
     </div>
   )
