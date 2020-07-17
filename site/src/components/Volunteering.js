@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import Organization from "./Organization"
 
 const Volunteering = props => {
   const { organizations, roles } = props
@@ -23,29 +23,3 @@ const Volunteering = props => {
 }
 
 export default Volunteering
-
-const Organization = props => {
-  const { name, city, country, roles } = props.organization
-  console.log(props.organization)
-
-  return (
-    <div className="org">
-      <span className="org-name">{name} </span>
-      <span className="org-location">
-        {country.length < 2 ? city.join(", ") : ""}
-        {city.length > 0 && country.length === 1 ? ", " : ""}
-        {country.join(", ")}
-        <br />
-        <ul className="roles">
-          {roles.map((role, index) => (
-            <li key={index + role.long_name}>
-              <span>{role.long_name} </span>
-              <span>{role.start_date} - </span>
-              {role.end_date ? role.end_date : "Nå"}
-            </li>
-          ))}
-        </ul>
-      </span>
-    </div>
-  )
-}
