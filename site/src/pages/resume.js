@@ -6,18 +6,17 @@ import Volunteering from "../components/Volunteering"
 import Work from "../components/Work"
 
 const Resume = ({ data }) => {
-  const me = data.allSanityMeta.nodes[0]
-  const programs = data.allSanityProgram.nodes
-  const organizations = data.allSanityOrganization.nodes
-  const vervRoles = data.allVervRole.nodes
-  const paidRoles = data.allPaidRole.nodes
+  const { metas, programs, organizations, vervRoles, paidRoles } = data
 
   return (
     <div className="resume">
-      <Meta me={me} />
-      <Education programs={programs} />
-      <Volunteering organizations={organizations} roles={vervRoles} />
-      <Work organizations={organizations} roles={paidRoles} />
+      <Meta me={metas.nodes[0]} />
+      <Education programs={programs.nodes} />
+      <Volunteering
+        organizations={organizations.nodes}
+        roles={vervRoles.nodes}
+      />
+      <Work organizations={organizations.nodes} roles={paidRoles.nodes} />
       <h2>Tekniske ferdigheter</h2>
     </div>
   )
@@ -27,18 +26,18 @@ export default Resume
 
 export const query = graphql`
   {
-    allSanityMeta {
+    metas: allSanityMeta {
       nodes {
         ...MetaFragment
       }
     }
-    allSanityProgram {
+    programs: allSanityProgram {
       nodes {
         id
         ...ProgramFragment
       }
     }
-    allSanityOrganization {
+    organizations: allSanityOrganization {
       nodes {
         id
         name
@@ -46,7 +45,7 @@ export const query = graphql`
         country
       }
     }
-    allVervRole: allSanityRole(
+    vervRoles: allSanityRole(
       filter: { paid: { eq: false } }
       sort: { fields: start_date }
     ) {
@@ -60,7 +59,7 @@ export const query = graphql`
         }
       }
     }
-    allPaidRole: allSanityRole(
+    paidRoles: allSanityRole(
       filter: { paid: { eq: true } }
       sort: { fields: start_date }
     ) {
