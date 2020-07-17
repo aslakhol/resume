@@ -1,8 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Meta from "../components/meta"
-import Program from "../components/Program"
-import Organizations from "../components/Organizations"
+import Education from "../components/Education"
+import Volunteering from "../components/Volunteering"
+import Work from "../components/Work"
 
 const Resume = ({ data }) => {
   const me = data.allSanityMeta.nodes[0]
@@ -14,15 +15,9 @@ const Resume = ({ data }) => {
   return (
     <div className="resume">
       <Meta me={me} />
-      <h2>Utdanning</h2>
-      {programs.map(program => (
-        <Program key={program.id} program={program} />
-      ))}
-
-      <h2>Verv</h2>
-      <Organizations organizations={organizations} roles={vervRoles} />
-      <h2>Arbeidserfaring</h2>
-      <Organizations organizations={organizations} roles={paidRoles} />
+      <Education programs={programs} />
+      <Volunteering organizations={organizations} roles={vervRoles} />
+      <Work organizations={organizations} roles={paidRoles} />
       <h2>Tekniske ferdigheter</h2>
     </div>
   )
