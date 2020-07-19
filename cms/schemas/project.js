@@ -17,6 +17,13 @@ export default {
         "Short description of the project, one or two sentences max.",
     },
     {
+      name: "organization",
+      title: "Organization",
+      type: "reference",
+      to: { type: "organization" },
+      description: "The organization that this project was linked to if any.",
+    },
+    {
       name: "role",
       title: "Role",
       type: "string",
