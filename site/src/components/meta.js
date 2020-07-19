@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import "./meta.css"
 
 const Meta = props => {
   const {
