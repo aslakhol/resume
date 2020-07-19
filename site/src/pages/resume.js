@@ -4,9 +4,17 @@ import Meta from "../components/meta"
 import Education from "../components/Education"
 import Volunteering from "../components/Volunteering"
 import Work from "../components/Work"
+import Skills from "../components/Skills"
 
 const Resume = ({ data }) => {
-  const { metas, programs, organizations, vervRoles, paidRoles } = data
+  const {
+    metas,
+    programs,
+    organizations,
+    vervRoles,
+    paidRoles,
+    projects,
+  } = data
 
   return (
     <div className="resume">
@@ -17,7 +25,7 @@ const Resume = ({ data }) => {
         roles={vervRoles.nodes}
       />
       <Work organizations={organizations.nodes} roles={paidRoles.nodes} />
-      <h2>Tekniske ferdigheter</h2>
+      <Skills projects={projects.nodes} />
     </div>
   )
 }
@@ -71,6 +79,11 @@ export const query = graphql`
           id
           name
         }
+      }
+    }
+    projects: allSanityProject {
+      nodes {
+        learned_technologies
       }
     }
   }
