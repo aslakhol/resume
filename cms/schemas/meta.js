@@ -24,8 +24,7 @@ export default {
     {
       name: "linkedin",
       title: "LinkedIn",
-      type: "url",
-      description: "LinkedIn url.",
+      type: "account-link",
     },
     {
       name: "website",
@@ -36,8 +35,7 @@ export default {
     {
       name: "github",
       title: "Github",
-      type: "url",
-      description: "Github url.",
+      type: "account-link",
     },
     {
       name: "phone",
