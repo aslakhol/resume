@@ -13,8 +13,6 @@ const Meta = props => {
     email,
   } = props.me
 
-  console.log(props)
-
   return (
     <div className="meta">
       <h1>
