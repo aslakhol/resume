@@ -5,7 +5,6 @@ const Meta = props => {
   const {
     first_name,
     last_name,
-    dob,
     address,
     phone,
     github,
@@ -26,7 +25,7 @@ const Meta = props => {
       <br />
       <span>
         <span>{phone}</span> | <span>{email}</span> | <span>{github}</span> |{" "}
-        <span>{linkedin}</span>
+        <span>{linkedin}</span> | <span>{website}</span>
       </span>
     </div>
   )
@@ -38,7 +37,6 @@ export const query = graphql`
   fragment MetaFragment on SanityMeta {
     first_name
     last_name
-    dob
     address
     phone
     github
