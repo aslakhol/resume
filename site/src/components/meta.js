@@ -20,11 +20,8 @@ const Meta = props => {
         <span className="first-name">{first_name} </span>
         <span className="last-name">{last_name}</span>
       </h1>
-      <span>
-        <span className="address">{address}</span>
-      </span>
-      <br />
-      <span>
+      <span className="address">{address}</span>
+      <span className="contact">
         <span>{phone}</span> | <span>{email}</span> |{" "}
         <span>
           <a href={github.url}>{github.username}</a>
