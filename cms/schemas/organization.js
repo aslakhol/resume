@@ -37,16 +37,16 @@ export default {
       description: "Longer description of the organization.",
     },
     {
-      name: "city",
-      title: "City",
+      name: "cities",
+      title: "Cities",
       type: "array",
       of: [{ type: "string" }],
       description:
         "The city or cities that the organization is located in and that I worked in.",
     },
     {
-      name: "country",
-      title: "Country",
+      name: "countries",
+      title: "Countries",
       type: "array",
       of: [{ type: "string" }],
       description:

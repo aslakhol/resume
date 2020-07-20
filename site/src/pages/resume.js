@@ -49,8 +49,8 @@ export const query = graphql`
       nodes {
         id
         name
-        city
-        country
+        cities
+        countries
       }
     }
     vervRoles: allSanityRole(
