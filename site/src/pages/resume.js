@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Meta from "../components/Meta"
-import Education from "../components/Education"
+import Education from "../components/Education/Education"
 import Volunteering from "../components/Volunteering"
 import Work from "../components/Work"
 import Skills from "../components/Skills"

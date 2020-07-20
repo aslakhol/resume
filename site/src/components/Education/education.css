@@ -1,0 +1,22 @@
+.program {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.program-range {
+  text-align: center;
+}
+
+.program-name {
+  font-weight: bold;
+}
+
+.location {
+  text-align: right;
+  font-style: italic;
+}
+
+#___gatsby {
+  width: 80%;
+}
