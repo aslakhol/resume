@@ -31,6 +31,7 @@ export const query = graphql`
   fragment ProgramFragment on SanityProgram {
     id
     name
+    sort_date: end_date
     start_date(formatString: "YYYY")
     end_date(formatString: "YYYY")
     institution {
