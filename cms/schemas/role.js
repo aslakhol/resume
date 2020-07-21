@@ -44,7 +44,7 @@ export default {
       name: "start_date",
       title: "Start date",
       type: "date",
-      description: "I assumed the role.",
+      description: "The date I assumed the role.",
     },
     {
       name: "end_date",
