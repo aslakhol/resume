@@ -41,7 +41,6 @@ export const query = graphql`
     }
     programs: allSanityProgram {
       nodes {
-        id
         ...ProgramFragment
       }
     }

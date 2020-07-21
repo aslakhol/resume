@@ -29,6 +29,7 @@ export default Program
 
 export const query = graphql`
   fragment ProgramFragment on SanityProgram {
+    id
     name
     start_date(formatString: "YYYY")
     end_date(formatString: "YYYY")
