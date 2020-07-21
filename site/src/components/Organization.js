@@ -12,8 +12,8 @@ const Organization = props => {
         <Location cities={cities} countries={countries} />
       </div>
       <ul className="roles">
-        {roles.map((role, index) => (
-          <Role role={role} key={index + role.long_name} />
+        {roles.map(role => (
+          <Role role={role} key={role.id} />
         ))}
       </ul>
     </div>
