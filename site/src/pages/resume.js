@@ -58,9 +58,9 @@ export const query = graphql`
       sort: { fields: start_date }
     ) {
       nodes {
-        long_name
-        start_date
-        end_date
+        name
+        start_date(locale: "nb", formatString: "MMMM YYYY")
+        end_date(locale: "nb", formatString: "MMMM YYYY")
         organization {
           id
           name
@@ -72,9 +72,9 @@ export const query = graphql`
       sort: { fields: start_date }
     ) {
       nodes {
-        long_name
-        start_date
-        end_date
+        name
+        start_date(locale: "nb", formatString: "MMMM YYYY")
+        end_date(locale: "nb", formatString: "MMMM YYYY")
         organization {
           id
           name

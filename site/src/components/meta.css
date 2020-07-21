@@ -42,6 +42,17 @@ body {
 h2 {
   font-size: 3.2rem;
   margin: 0.8rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+ul.roles {
+  margin-top: 0.5rem;
+}
+
+.role-content {
+  display: flex;
+  justify-content: space-between;
 }
 
 .org-name {

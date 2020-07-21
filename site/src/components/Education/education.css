@@ -20,3 +20,8 @@
 #___gatsby {
   width: 80%;
 }
+
+.org-title-line {
+  display: flex;
+  justify-content: space-between;
+}

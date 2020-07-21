@@ -7,9 +7,10 @@ const Organization = props => {
 
   return (
     <div className="org">
-      <span className="org-name">{name} </span>
-      <Location cities={cities} countries={countries} />
-      <br />
+      <div className="org-title-line">
+        <span className="org-name">{name} </span>
+        <Location cities={cities} countries={countries} />
+      </div>
       <ul className="roles">
         {roles.map((role, index) => (
           <Role role={role} key={index + role.long_name} />
