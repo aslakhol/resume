@@ -54,30 +54,18 @@ export const query = graphql`
     }
     vervRoles: allSanityRole(
       filter: { paid: { eq: false } }
-      sort: { fields: start_date }
+      sort: { fields: start_date, order: DESC }
     ) {
       nodes {
-        name
-        start_date(locale: "nb", formatString: "MMMM YYYY")
-        end_date(locale: "nb", formatString: "MMMM YYYY")
-        organization {
-          id
-          name
-        }
+        ...RoleFragment
       }
     }
     paidRoles: allSanityRole(
       filter: { paid: { eq: true } }
-      sort: { fields: start_date }
+      sort: { fields: start_date, order: DESC }
     ) {
       nodes {
-        name
-        start_date(locale: "nb", formatString: "MMMM YYYY")
-        end_date(locale: "nb", formatString: "MMMM YYYY")
-        organization {
-          id
-          name
-        }
+        ...RoleFragment
       }
     }
     projects: allSanityProject {
