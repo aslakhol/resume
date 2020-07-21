@@ -5,6 +5,7 @@ import Education from "../components/Education/Education"
 import Volunteering from "../components/Volunteering"
 import Work from "../components/Work"
 import Skills from "../components/Skills"
+import { dateCompare } from "../utils"
 
 const Resume = ({ data }) => {
   const {
@@ -22,9 +23,12 @@ const Resume = ({ data }) => {
       <Education programs={programs.nodes} />
       <Volunteering
         organizations={organizations.nodes}
-        roles={vervRoles.nodes}
+        roles={vervRoles.nodes.sort((a, b) => dateCompare(a, b))}
       />
-      <Work organizations={organizations.nodes} roles={paidRoles.nodes} />
+      <Work
+        organizations={organizations.nodes}
+        roles={paidRoles.nodes.sort((a, b) => dateCompare(a, b))}
+      />
       <Skills projects={projects.nodes} />
     </div>
   )

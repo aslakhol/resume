@@ -22,6 +22,7 @@ export const query = graphql`
   fragment RoleFragment on SanityRole {
     id
     name
+    sort_date: start_date
     start_date(locale: "nb", formatString: "MMM YYYY")
     end_date(locale: "nb", formatString: "MMM YYYY")
     organization {

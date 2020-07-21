@@ -1,5 +1,6 @@
 import React from "react"
 import Organization from "./Organization"
+import { dateCompare } from "../utils"
 
 const Organizations = props => {
   const { organizations, roles } = props
@@ -12,6 +13,9 @@ const Organizations = props => {
       }
     })
     .filter(org => org.roles.length > 0)
+    .sort((a, b) => dateCompare(a.roles[0], b.roles[0]))
+
+  // skal jeg sortere på start date eller end date ? Elle help pls
 
   return (
     <>
