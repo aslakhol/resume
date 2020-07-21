@@ -9,12 +9,12 @@ const Program = props => {
 
   return (
     <div className="program">
-      <span className="program-range">
-        <span>{start_date}</span> - <span>{end_date ? end_date : "Nå"}</span>
-      </span>
       <span className="program-identifier">
         <span className="program-name">{name}</span>,{" "}
         <span className="insituttion-name">{institution.name}</span>
+      </span>
+      <span className="program-range">
+        <span>{start_date}</span> - <span>{end_date ? end_date : "Nå"}</span>
       </span>
       <Location
         cities={cities}
