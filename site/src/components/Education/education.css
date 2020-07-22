@@ -14,7 +14,12 @@
 
 .location {
   text-align: right;
-  font-style: italic;
+  /* font-style: italic; */
+  font-weight: bold;
+}
+
+.role-date-range {
+  /* font-style: italic; */
 }
 
 #___gatsby {

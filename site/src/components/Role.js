@@ -8,7 +8,8 @@ const Role = props => {
       <div className="role-content">
         <span>{name} </span>
         <div className="role-date-range">
-          <span>{start_date} - </span>
+          <span>{start_date}</span>
+          <span> - </span>
           <span>{end_date ? end_date : "Nå"}</span>
         </div>
       </div>

@@ -3,7 +3,7 @@
 }
 
 body {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #333333;
   font-family: Source Sans Pro, sans-serif;
   display: flex;
@@ -40,14 +40,14 @@ body {
 }
 
 h2 {
-  font-size: 3.2rem;
-  margin: 0.8rem;
+  font-size: 3rem;
+  margin: 0.4rem;
   margin-left: 0;
   margin-right: 0;
 }
 
 ul.roles {
-  margin-top: 0.5rem;
+  margin: 0.4rem;
 }
 
 .role-content {
@@ -55,14 +55,24 @@ ul.roles {
   justify-content: space-between;
 }
 
+/* .role-date-range {
+  width: 125px;
+  display: flex;
+  justify-content: space-between;
+} */
+
 .org-name {
   font-weight: bold;
 }
 
 .skills {
-  width: 10rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .skill {
-  margin: 0.8rem;
+  padding: 0.2rem 0.4rem;
+  margin: 0.2rem;
+  background-color: #eee;
+  border-radius: 0.2rem;
 }
