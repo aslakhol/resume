@@ -17,6 +17,8 @@ const Resume = ({ data }) => {
     projects,
   } = data
 
+  const bothRoles = vervRoles.nodes.concat(paidRoles.nodes)
+
   return (
     <div className="resume">
       <Meta me={metas.nodes[0]} />
