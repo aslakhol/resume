@@ -57,7 +57,7 @@ export const query = graphql`
       }
     }
     vervRoles: allSanityRole(
-      filter: { paid: { eq: false } }
+      filter: { paid: { eq: false }, display: { eq: true } }
       sort: { fields: start_date, order: DESC }
     ) {
       nodes {
@@ -65,7 +65,7 @@ export const query = graphql`
       }
     }
     paidRoles: allSanityRole(
-      filter: { paid: { eq: true } }
+      filter: { paid: { eq: true }, display: { eq: true } }
       sort: { fields: start_date, order: DESC }
     ) {
       nodes {

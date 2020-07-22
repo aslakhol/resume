@@ -10,6 +10,12 @@ export default {
       description: "Name of role.",
     },
     {
+      name: "display",
+      title: "Display",
+      type: "boolean",
+      description: "Should this be displayed on the resume?",
+    },
+    {
       name: "organization",
       title: "Organization",
       type: "reference",
