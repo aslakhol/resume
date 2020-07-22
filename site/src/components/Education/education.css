@@ -1,11 +1,11 @@
 .program {
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 1fr;
 }
 
 .program-range {
-  text-align: right;
+  text-align: center;
 }
 
 .program-name {
