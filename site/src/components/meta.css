@@ -76,3 +76,21 @@ ul.roles {
   background-color: #eee;
   border-radius: 0.2rem;
 }
+
+svg {
+  height: 1.4rem;
+  width: 1.4rem;
+  margin-top: 0.1rem;
+  margin-right: 0.5rem;
+}
+
+.contact {
+  display: flex;
+}
+
+.contact-element {
+  margin: 0 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
