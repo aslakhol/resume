@@ -15,15 +15,15 @@
 .location {
   text-align: right;
   /* font-style: italic; */
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .role-date-range {
   /* font-style: italic; */
 }
 
-#___gatsby {
-  width: 80%;
+.resume {
+  width: 67.9rem;
 }
 
 .org-title-line {

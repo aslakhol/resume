@@ -4,6 +4,7 @@ import GitHubIcon from "../images/svg/github.svg"
 import LinkedInIcon from "../images/svg/linkedin.svg"
 import MailIcon from "../images/svg/mail.svg"
 import PhoneIcon from "../images/svg/phone.svg"
+import { ContactElement, ContactElementLink } from "./ContactElement"
 
 import "./meta.css"
 
@@ -48,27 +49,6 @@ const Meta = props => {
 }
 
 export default Meta
-
-const ContactElementLink = props => {
-  const { link, children } = props
-
-  return (
-    <span className="contact-element">
-      {children}
-      <a href={link.url}>{link.username}</a>
-    </span>
-  )
-}
-const ContactElement = props => {
-  const { displayString, children } = props
-
-  return (
-    <span className="contact-element">
-      {children}
-      <span>{displayString}</span>
-    </span>
-  )
-}
 
 export const query = graphql`
   fragment MetaFragment on SanityMeta {
