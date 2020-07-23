@@ -1,42 +1,80 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
+import Meta from "../components/Meta"
+import Education from "../components/Education/Education"
+import Volunteering from "../components/Volunteering"
+import Work from "../components/Work"
+import Skills from "../components/Skills"
+import { dateCompare } from "../utils"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+const Resume = ({ data }) => {
+  const {
+    metas,
+    programs,
+    organizations,
+    vervRoles,
+    paidRoles,
+    projects,
+  } = data
 
-const IndexPage = ({ data }) => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+  return (
+    <div className="resume">
+      <Meta me={metas.nodes[0]} />
+      <Education programs={programs.nodes} />
+      <Volunteering
+        organizations={organizations.nodes}
+        roles={vervRoles.nodes.sort((a, b) => dateCompare(a, b))}
+      />
+      <Work
+        organizations={organizations.nodes}
+        roles={paidRoles.nodes.sort((a, b) => dateCompare(a, b))}
+      />
+      <Skills projects={projects.nodes} />
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
+  )
+}
 
-    <h3>Like these animals!</h3>
-    {data.allSanityAnimal.edges.map(({ node }) => (
-      <div>
-        <Link to={node.slug.current}>{node.name}</Link>
-      </div>
-    ))}
-  </Layout>
-)
-
-export default IndexPage
+export default Resume
 
 export const query = graphql`
-  query {
-    allSanityAnimal {
-      edges {
-        node {
-          slug {
-            current
-          }
-          name
-        }
+  {
+    metas: allSanityMeta {
+      nodes {
+        ...MetaFragment
+      }
+    }
+    programs: allSanityProgram {
+      nodes {
+        ...ProgramFragment
+      }
+    }
+    organizations: allSanityOrganization {
+      nodes {
+        id
+        name
+        cities
+        countries
+      }
+    }
+    vervRoles: allSanityRole(
+      filter: { paid: { eq: false }, display: { eq: true } }
+      sort: { fields: start_date, order: DESC }
+    ) {
+      nodes {
+        ...RoleFragment
+      }
+    }
+    paidRoles: allSanityRole(
+      filter: { paid: { eq: true }, display: { eq: true } }
+      sort: { fields: start_date, order: DESC }
+    ) {
+      nodes {
+        ...RoleFragment
+      }
+    }
+    projects: allSanityProject {
+      nodes {
+        learned_technologies
       }
     }
   }
