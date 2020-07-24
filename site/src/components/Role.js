@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 
 const Role = props => {
   const { name, start_date, end_date } = props.role
