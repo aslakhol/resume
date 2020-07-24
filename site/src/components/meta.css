@@ -2,6 +2,42 @@
   font-size: 62.5%;
 }
 
+@media (max-width: 350px) {
+  :root {
+    font-size: 28%;
+  }
+}
+
+@media (max-width: 400px) and (min-width: 351px) {
+  :root {
+    font-size: 31%;
+  }
+}
+
+@media (max-width: 450px) and (min-width: 401px) {
+  :root {
+    font-size: 35%;
+  }
+}
+
+@media (max-width: 500px) and (min-width: 451px) {
+  :root {
+    font-size: 40%;
+  }
+}
+
+@media (max-width: 600px) and (min-width: 501px) {
+  :root {
+    font-size: 45%;
+  }
+}
+
+@media (max-width: 700px) and (min-width: 601px) {
+  :root {
+    font-size: 54%;
+  }
+}
+
 body {
   font-size: 1.4rem;
   color: #333333;
