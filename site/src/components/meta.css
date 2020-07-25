@@ -11,10 +11,10 @@
 @media (min-width: 351px) and (max-width: 400px) {
   :root {
     font-size: 31%;
-    background-color: azure;
+    background-color: sandybrown;
   }
   .skills {
-    width: 336px;
+    width: 55px;
   }
 }
 
