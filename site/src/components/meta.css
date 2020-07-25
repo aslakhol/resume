@@ -11,10 +11,7 @@
 @media (min-width: 351px) and (max-width: 400px) {
   :root {
     font-size: 31%;
-    background-color: gainsboro;
-  }
-  .skills {
-    display: none !important;
+    background-color: blanchedalmond;
   }
 }
 
@@ -108,7 +105,6 @@ ul.roles {
 .skills {
   display: flex;
   flex-wrap: wrap;
-  width: 67.9rem;
 }
 
 .skill {
@@ -137,5 +133,5 @@ svg {
 }
 
 .resume {
-  width: 67.9rem;
+  max-width: 67.9rem;
 }
