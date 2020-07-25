@@ -11,7 +11,10 @@
 @media (min-width: 351px) and (max-width: 400px) {
   :root {
     font-size: 31%;
-    background-color: lightsteelblue;
+    background-color: seagreen;
+  }
+  .resume {
+    width: 336px;
   }
 }
 
