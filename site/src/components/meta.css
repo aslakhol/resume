@@ -8,31 +8,31 @@
   }
 }
 
-@media (max-width: 400px) and (min-width: 351px) {
+@media (min-width: 351px) and (max-width: 400px) {
   :root {
     font-size: 31%;
   }
 }
 
-@media (max-width: 450px) and (min-width: 401px) {
+@media (min-width: 401px) and (max-width: 450px) {
   :root {
     font-size: 35%;
   }
 }
 
-@media (max-width: 500px) and (min-width: 451px) {
+@media (min-width: 451px) and (max-width: 500px) {
   :root {
     font-size: 40%;
   }
 }
 
-@media (max-width: 600px) and (min-width: 501px) {
+@media (min-width: 501px) and (max-width: 600px) {
   :root {
     font-size: 45%;
   }
 }
 
-@media (max-width: 700px) and (min-width: 601px) {
+@media (min-width: 601px) and (max-width: 700px) {
   :root {
     font-size: 54%;
   }
