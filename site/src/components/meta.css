@@ -14,7 +14,7 @@
     background-color: sandybrown;
   }
   .skills {
-    width: 55px;
+    display: none;
   }
 }
 
