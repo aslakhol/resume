@@ -6,6 +6,11 @@
   :root {
     font-size: 62.5% !important;
   }
+
+  a {
+    color: #333333;
+    text-decoration: none;
+  }
 }
 
 @media (max-width: 350px) {
