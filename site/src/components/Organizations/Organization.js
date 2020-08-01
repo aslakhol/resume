@@ -1,6 +1,6 @@
 import React from "react"
 import Role from "./Role"
-import Location from "./Location"
+import Location from "../Location"
 
 const Organization = props => {
   const { name, cities, countries, roles } = props.organization
