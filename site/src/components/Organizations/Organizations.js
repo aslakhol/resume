@@ -1,6 +1,6 @@
 import React from "react"
 import Organization from "./Organization"
-import { dateCompare } from "../utils"
+import { dateCompare } from "../../utils"
 
 const Organizations = props => {
   const { organizations, roles } = props

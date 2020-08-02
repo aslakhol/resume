@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
-import GitHubIcon from "../images/svg/github.svg"
-import LinkedInIcon from "../images/svg/linkedin.svg"
-import MailIcon from "../images/svg/mail.svg"
-import PhoneIcon from "../images/svg/phone.svg"
+import GitHubIcon from "../../images/svg/github.svg"
+import LinkedInIcon from "../../images/svg/linkedin.svg"
+import MailIcon from "../../images/svg/mail.svg"
+import PhoneIcon from "../../images/svg/phone.svg"
 import { ContactElement, ContactElementLink } from "./ContactElement"
 
 import "./meta.css"

@@ -1,10 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Meta from "../components/Meta"
+import Meta from "../components/Meta/Meta"
 import Education from "../components/Education/Education"
-import Volunteering from "../components/Volunteering"
-import Work from "../components/Work"
-import Skills from "../components/Skills"
+import Volunteering from "../components/Organizations/Volunteering"
+import Work from "../components/Organizations/Work"
+import Skills from "../components/Skills/Skills"
 import { dateCompare } from "../utils"
 
 const Resume = ({ data }) => {
