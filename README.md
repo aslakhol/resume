@@ -1,1 +1,1 @@
-This is a digital CV, as well as a showcase of my projects.
+This is a digital resume built with Gatsby and Sanity.
