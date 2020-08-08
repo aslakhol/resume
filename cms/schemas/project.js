@@ -49,6 +49,12 @@ export default {
       description: "Long description of the project.",
     },
     {
+      name: "display",
+      title: "Display in portfolio",
+      type: "boolean",
+      description: "Should this project be displayed as part of the portfolio.",
+    },
+    {
       name: "paid",
       title: "Paid",
       type: "boolean",
