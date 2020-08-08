@@ -61,6 +61,12 @@ export default {
       description: "Was this a paid project?",
     },
     {
+      name: "thumbnail",
+      title: "Thumbnail",
+      type: "image",
+      description: "Image that is displayed on the overview page.",
+    },
+    {
       name: "learned_technologies",
       title: "Learned techonologies",
       type: "array",
@@ -86,6 +92,6 @@ export default {
     },
   ],
   preview: {
-    select: { title: "name" },
+    select: { title: "name", media: "image" },
   },
 };
