@@ -31,8 +31,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby openssl-legacy-provider build",
-    "develop": "gatsby openssl-legacy-provider develop",
+    "build": "gatsby --openssl-legacy-provider build",
+    "develop": "gatsby --openssl-legacy-provider develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
